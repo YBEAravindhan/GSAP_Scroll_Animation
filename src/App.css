@@ -87,6 +87,7 @@ section {
     align-items: center;
     text-align: center;
     will-change: transform;
+    transform-origin: center top;
 }
 
 .card-front .icon {

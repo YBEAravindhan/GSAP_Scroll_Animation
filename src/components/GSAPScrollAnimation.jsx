@@ -168,22 +168,17 @@ const GSAPScrollAnimation = () => {
             )
           );
 
-          gsap.set(card, {
-            y: `${gsap.utils.mapRange(
-              0,
-              1,
-              -50,
-              -250,
-              dismissProgress
-            )}%`,
-            rotation: gsap.utils.mapRange(
-              0,
-              1,
-              cardFlipTiltAngles[i],
-              cardDismissTiltAngles[i],
-              dismissProgress
-            ),
-          });
+        gsap.set(card, {
+  y: `${gsap.utils.mapRange(0, 1, -20, -120, dismissProgress)}%`,
+  rotation: gsap.utils.mapRange(
+    0,
+    1,
+    cardFlipTiltAngles[i],
+    cardDismissTiltAngles[i],
+    dismissProgress
+  ),
+  opacity: gsap.utils.mapRange(0, 1, 1, 0, dismissProgress), // 👈 key
+});
         });
       },
     });
